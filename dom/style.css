@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+div {
+  display: flex;
+  gap: 20px;
+}
+
+.boxes {
+  height: 40%;
+  width: 50%;
+  border: 2px solid black;
+}
+
+button {
+  padding: 10px 30px;
+  border: none;
+  background-color: blue;
+  color: white;
+}
+
+button:first-child {
+  background-color: red;
+}
+
+button:nth-child(2) {
+  background-color: yellow;
+}
+button:nth-child(3) {
+  background-color: pink;
+}
+button:nth-child(4) {
+  background-color: blue;
+}

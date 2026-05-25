@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box {
+  height: 40%;
+  width: 50%;
+  border: 2px solid black;
+}
+.btns {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+button:first-child {
+  background-color: red;
+}
+
+button:nth-child(2) {
+  background-color: darkkhaki;
+}
+
+button:nth-child(3) {
+  background-color: green;
+}
+
+button:nth-child(4) {
+  background-color: blue;
+}
