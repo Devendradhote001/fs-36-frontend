@@ -4,33 +4,30 @@ let tasksDiv = document.querySelector(".tasks");
 
 let arr = [];
 
-console.log("outer->", arr);
-
-let ui = () => {
-  arr.forEach((value) => {
+let chacha = () => {
+  tasksDiv.innerHTML = null;
+  arr.forEach((value, index) => {
     tasksDiv.innerHTML += `<div class="li">
             <h2>${value}</h2>
-            <button onclick={onDelete()} id="del">delete</button>
+            <button onclick={deleteTask(${index})} id="del">delete</button>
           </div>`;
   });
 };
 
 btn.addEventListener("click", () => {
   let value = inp.value;
+
+  if (!value) return;
+
   arr.push(value);
 
-  tasksDiv.innerHTML = null;
-  ui();
+  chacha();
 
   inp.value = "";
 });
 
-let onDelete = () => {
-  console.log("delete...");
+function deleteTask(index) {
+  arr.splice(index, 1);
 
-  //   delete logic
-
-  arr.pop();
-  tasksDiv.innerHTML = null;
-  ui();
-};
+  chacha();
+}
