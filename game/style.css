@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+main {
+  position: relative;
+  height: 70%;
+  padding: 10px;
+  width: 30%;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.top {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.box {
+  position: absolute;
+  height: 10%;
+  width: 15%;
+  background-color: red;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+}
