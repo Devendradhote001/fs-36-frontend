@@ -163,10 +163,24 @@
 
 // fn();
 
+console.log("first");
+
 let response = fetch("https://fakestoreapi.com/products");
 
-response
-  .then((val) => {
-     return val.json();
-  })
-  .then((res) => console.log(res));
+console.log("second");
+
+setTimeout(() => {
+  console.log("fourth");
+}, 2000);
+
+const res = async () => {
+  console.log("hello");
+  let result = await response;
+  console.log("third");
+};
+
+console.log(response);
+
+console.log(res());
+
+console.log("last");
